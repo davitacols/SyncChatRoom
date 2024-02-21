@@ -32,7 +32,7 @@ SyncChatRoom is a real-time chat application developed using Django and Django C
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/your-username/SyncChatRoom.git
+    git clone https://github.com/davitacols/SyncChatRoom.git
     cd SyncChatRoom
     ```
 

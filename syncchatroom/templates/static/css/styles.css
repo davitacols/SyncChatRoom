@@ -1,0 +1,22 @@
+/* syncchatroom/static/css/styles.css */
+
+#chat-container {
+  width: 400px;
+  margin: 20px auto;
+}
+
+#chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#message-input {
+  width: 70%;
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+}

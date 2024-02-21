@@ -1,0 +1,29 @@
+<!-- syncchatroom/templates/syncchatroom/message_list.html -->
+
+{% extends 'syncchatroom/base.html' %}
+
+{% block content %}
+    <h1 class="mb-4">Chat Room</h1>
+    
+    <ul class="list-group">
+        {% for message in messages %}
+            <li class="list-group-item">
+                <strong>{{ message.user }}</strong> - {{ message.content }}
+                <span class="float-right">{{ message.timestamp|date:"F d, Y H:i:s" }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="user">Your Name:</label>
+            <input type="text" class="form-control" id="user" name="user" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Message:</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+{% endblock %}
